@@ -7,10 +7,20 @@
 <script>
     export default {
         name: 'HelloWorld',
+        created: function () {
+            this.test();
+        },
         props: {
             msg: {
                 type: String,
-                default: 'asd'
+                default: ''
+            }
+        },
+        methods: {
+            test: function () {
+                this.$http.get('test').then(response => {
+                    this.msg = response
+                })
             }
         }
     }

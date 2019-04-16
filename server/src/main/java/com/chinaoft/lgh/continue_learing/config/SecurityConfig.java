@@ -17,8 +17,8 @@ import org.springframework.security.web.access.intercept.FilterSecurityIntercept
 
 import javax.annotation.Resource;
 
-@Configuration
-@EnableWebSecurity
+//@Configuration
+//@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Resource
     private UserDetailsService userDetailsService;
